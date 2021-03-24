@@ -34,7 +34,8 @@
           <li class="nav-item">
             <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link' %>
           </li>
-        <% else %>
+
+        <% else user.admin %>
 
          <li>
             <%= link_to "Home", internal_profile_path, class: 'navbar-brand' %>
@@ -57,7 +58,16 @@
             <li class="nav-item">
             <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'nav-link', :data => { :no_turbolink => true } %>
           </li>
+
+            <% if user.admin?%>
+             <li class="nav-item">
+              <%= link_to "Admin Options", internal_workouts_path, class: 'nav-link' %>
+            </li>
+
+            <% end %>
         <% end %>
+
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
