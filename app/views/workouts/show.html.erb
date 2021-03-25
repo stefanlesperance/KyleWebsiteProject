@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Workout type:</strong>
+  <%= @workout.workout_type %>
+</p>
+
+<p>
+  <%= @workout.user_id %>
+  <br>
+  <%= @workout.id%>
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Exercise name</th>
+      <th>Reps</th>
+      <th>Rest</th>
+      <th>Intensity</th>
+      <th>Workout</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @exercises.each do |exercise| %>
+    	<% if exercise.workout_id == @workout.id %>
+	      <tr>
+	        <td><%= exercise.exercise_name %></td>
+	        <td><%= exercise.reps %></td>
+	        <td><%= exercise.rest %></td>
+	        <td><%= exercise.intensity %></td>
+	        <td><%= exercise.workout_id %></td>
+	        <td><%= link_to 'Details', exercise %></td>
+	        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+	        <td><%= link_to 'Remove', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	      </tr>
+	    <% end %>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to 'Add Exercise', new_exercise_path(controller: :exercises_controller, action: :new, ) %>
+<br>
+<br>
+<%= link_to 'Edit', edit_workout_path(@workout) %> |
+<%= link_to 'Back', workouts_path %>

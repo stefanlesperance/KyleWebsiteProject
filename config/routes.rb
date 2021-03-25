@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :exercises
+  resources :workouts
   #Home Segment
   root 'home_page#home'
   get 'home_page/about', to: 'home_page#about'
