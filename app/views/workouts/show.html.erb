@@ -42,8 +42,10 @@
 
 </table>
 
-<%= link_to 'Add Exercise', new_exercise_path(controller: :exercises_controller, action: :new, ) %>
+<%= link_to 'Add Exercise', new_exercise_path( :controller => "exercises_controller", :action => "new" , :workout_id => @workout.id ) %>
+
 <br>
 <br>
+
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>

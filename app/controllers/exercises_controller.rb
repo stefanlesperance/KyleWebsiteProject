@@ -13,6 +13,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/new
   def new
     @exercise = Exercise.new
+    @workout_id = params[:workout_id]
   end
 
   # GET /exercises/1/edit
