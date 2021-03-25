@@ -42,7 +42,7 @@
 
 </table>
 
-<%= link_to 'Add Exercise', new_exercise_path, :method => :set_current_workout(@workout.id) %>
+<%= link_to 'Add Exercise', new_exercise_path(controller: :exercises_controller, action: :new, ) %>
 <br>
 <br>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |

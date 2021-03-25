@@ -8,6 +8,7 @@ class WorkoutsController < ApplicationController
 
   # GET /workouts/1 or /workouts/1.json
   def show
+    #Had to define Exercises here otherwise it couldn't be accessed at all.
     @exercises = Exercise.all
   end
 
