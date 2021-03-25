@@ -56,6 +56,16 @@ class ExercisesController < ApplicationController
     end
   end
 
+  def set_current_workout
+    @workout_id_value = params[:workout_id]
+    session[:passed_workout_id] = @workout_id_value
+  end
+
+  def get_current_workout
+    @workout_id_value = session[:passed_workout_id]
+    @get_value = @workout_id_value
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_exercise
