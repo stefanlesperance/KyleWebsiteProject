@@ -33,11 +33,9 @@
 
   <div class="field">
     <%= form.label :workout %>
-    <% if params[:workout_id] == nil%>
-    <%= "The variable is empty" %>
-    <% else %>
+
     <%= form.number_field :workout_id, value:  @workout_id, type: :hidden %>
-    <% end %>
+
   </div>
 
   <div class="actions">
