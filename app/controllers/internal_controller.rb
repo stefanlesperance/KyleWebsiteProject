@@ -7,6 +7,8 @@ class InternalController < ApplicationController
   end
 
   def profile
+    #This current user tactic ensures that I can move the userID around, and assign it to an instance variable.
+    #It's effective and it is how I will ensure every Controller can acces it, and then apply to the DB for information.
     if current_user
       @current_user_id = current_user
     else
@@ -19,7 +21,6 @@ class InternalController < ApplicationController
   end
 
 
-  def workout
-  end
+
   
 end

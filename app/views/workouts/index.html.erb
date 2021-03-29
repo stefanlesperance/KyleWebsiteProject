@@ -12,15 +12,17 @@
   </thead>
 
   <tbody>
-    <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= workout.workout_type %></td>
-        <td><%= workout.user_id %></td>
-        <td><%= link_to 'Show', workout %></td>
-        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <% @workouts.each do |workout| %>
+      <% if @current_user_id == workout.user_id %>
+          <tr>
+            <td><%= workout.workout_type %></td>
+            <td><%= workout.user_id %></td>
+            <td><%= link_to 'Show', workout %></td>
+            <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+            <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
   </tbody>
 </table>
 
