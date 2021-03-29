@@ -6,6 +6,7 @@ class InternalController < ApplicationController
   end
 
   def profile
+    
   end
 
 

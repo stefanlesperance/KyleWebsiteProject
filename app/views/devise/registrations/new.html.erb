@@ -9,6 +9,29 @@
   </div>
 
   <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :middlename %><br />
+    <%= f.text_field :middlename, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthyear %><br />
+    <%= f.number_field :birthyear, autofocus: true %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -21,7 +44,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class = "ck-button">
+    <%= f.check_box :terms %>
+    <span>I consent to the terms and conditions</span>
+  </div>
+
+
   <div class="actions">
+    
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
