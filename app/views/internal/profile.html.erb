@@ -2,22 +2,10 @@
 
 <h1>Profile</h1>
 
-<p>
-	<%= @user.id%>
-</p>
+<%= @current_user_id.id %>
+<br>
 
-	<div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited profile changes from being saved:</h2>
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<%= @current_user_id.firstname %>
 
-<div class="field">
-    <%= form.label :ticker %>
-    <%= form.text_field :ticker %>
-</div>
 
 <!-- I need to create an error issue. -->
