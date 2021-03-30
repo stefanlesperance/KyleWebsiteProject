@@ -13,6 +13,7 @@ import "channels"
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
+//= require flatpickr
 
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -22,6 +23,11 @@ require("channels")
 import "bootstrap"
 
 import "../stylesheets/application"
+
+document.addEventListener('DOMContentLoaded', function() {
+  flatpickr('.your-selector');
+})
+
 
 Rails.start()
 Turbolinks.start()

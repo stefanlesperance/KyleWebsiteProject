@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.6'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem "simple_calendar", "~> 2.4"
+gem 'flatpickr'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
