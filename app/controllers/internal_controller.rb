@@ -19,8 +19,5 @@ class InternalController < ApplicationController
 
   def schedule
   end
-
-
-
   
 end

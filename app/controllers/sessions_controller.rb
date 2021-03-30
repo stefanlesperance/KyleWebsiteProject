@@ -3,7 +3,9 @@ class SessionsController < ApplicationController
 
   # GET /sessions or /sessions.json
   def index
-    @sessions = Session.all
+    @session = Session.all
+    start_date = params.fetch(:start_date, Date.today).to_date
+    @sessions = Session.where(starts_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 
   # GET /sessions/1 or /sessions/1.json
