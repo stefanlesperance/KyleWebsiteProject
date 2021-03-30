@@ -33,7 +33,9 @@
 
   <div class="field">
     <%= form.label :workout %>
-    <%= form.label :workout_id, value: workout.id %>
+
+    <%= form.number_field :workout_id, value:  @workout_id, type: :hidden %>
+
   </div>
 
   <div class="actions">

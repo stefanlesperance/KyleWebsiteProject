@@ -13,6 +13,29 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :middlename %><br />
+    <%= f.text_field :middlename, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthyear %><br />
+    <%= f.number_field :birthyear, autofocus: true %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>

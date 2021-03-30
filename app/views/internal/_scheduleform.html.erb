@@ -1,0 +1,12 @@
+<%= form_with do |form| %>
+
+  <form>
+    <%= month_calendar events: @sessions do |date, sessions| %>
+      <%= date %>
+      <div>
+       <% sessions.each do |sessions| %>
+       <%= sessions.name %>
+      </div>
+    <% end %>
+  </form>
+<% end %>

@@ -1,0 +1,34 @@
+<%= form_with do |form| %>
+
+<form>
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, value: @current_user_id.firstname  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middle_name %>
+    <%= form.text_field :middle_name, value: @current_user_id.middlename  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, value: @current_user_id.lastname  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth_year %>
+    <%= form.text_field :birth_year, value: @current_user_id.birthyear  %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, value: @current_user_id.id  %>
+  </div>
+  <div class="actions">
+    <!-- I need to figure out how to direct it to the User Update thing. -->
+    <%= form.submit %>
+  </div>
+</form>
+<% end %>
